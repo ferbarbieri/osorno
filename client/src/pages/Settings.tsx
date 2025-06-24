@@ -148,7 +148,7 @@ export default function Settings() {
                         </div>
                         
                         <div className="space-y-2">
-                          <Label htmlFor="email">Email Address</Label>
+                          <Label htmlFor="email">Endereço de Email</Label>
                           <Input 
                             id="email" 
                             name="email" 
@@ -159,7 +159,7 @@ export default function Settings() {
                         </div>
                         
                         <div className="space-y-2">
-                          <Label htmlFor="company">Company</Label>
+                          <Label htmlFor="company">Empresa</Label>
                           <Input 
                             id="company" 
                             name="company" 
@@ -169,17 +169,17 @@ export default function Settings() {
                         </div>
                         
                         <div className="space-y-2">
-                          <Label htmlFor="role">Role</Label>
+                          <Label htmlFor="role">Cargo</Label>
                           <Select value={profile.role} onValueChange={value => setProfile(prev => ({ ...prev, role: value }))}>
                             <SelectTrigger>
-                              <SelectValue placeholder="Select a role" />
+                              <SelectValue placeholder="Selecione um cargo" />
                             </SelectTrigger>
                             <SelectContent>
-                              <SelectItem value="Data Analyst">Data Analyst</SelectItem>
-                              <SelectItem value="Data Scientist">Data Scientist</SelectItem>
-                              <SelectItem value="Business Analyst">Business Analyst</SelectItem>
-                              <SelectItem value="Executive">Executive</SelectItem>
-                              <SelectItem value="Other">Other</SelectItem>
+                              <SelectItem value="Data Analyst">Analista de Dados</SelectItem>
+                              <SelectItem value="Data Scientist">Cientista de Dados</SelectItem>
+                              <SelectItem value="Business Analyst">Analista de Negócios</SelectItem>
+                              <SelectItem value="Executive">Executivo</SelectItem>
+                              <SelectItem value="Other">Outro</SelectItem>
                             </SelectContent>
                           </Select>
                         </div>
@@ -192,7 +192,7 @@ export default function Settings() {
                               <i className="ri-loader-4-line animate-spin mr-2"></i>
                               Saving...
                             </>
-                          ) : "Save Changes"}
+                          ) : "Salvar Alterações"}
                         </Button>
                       </div>
                     </CardContent>
@@ -203,12 +203,12 @@ export default function Settings() {
                 <TabsContent value="api">
                   <Card>
                     <CardHeader>
-                      <CardTitle>API Keys</CardTitle>
+                      <CardTitle>Chaves API</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="space-y-2">
                         <div className="flex justify-between items-center">
-                          <Label htmlFor="openai">OpenAI API Key</Label>
+                          <Label htmlFor="openai">Chave API OpenAI</Label>
                           <Button 
                             variant="outline" 
                             size="sm" 
@@ -218,12 +218,12 @@ export default function Settings() {
                             {apiKeys.showKey ? (
                               <>
                                 <i className="ri-eye-off-line mr-1"></i>
-                                Hide
+                                Ocultar
                               </>
                             ) : (
                               <>
                                 <i className="ri-eye-line mr-1"></i>
-                                Show
+                                Mostrar
                               </>
                             )}
                           </Button>
@@ -237,9 +237,9 @@ export default function Settings() {
                           placeholder="sk-..." 
                         />
                         <p className="text-xs text-gray-500">
-                          Required for AI-powered data processing and conversational queries. 
+                          Necessário para processamento de dados com IA e consultas conversacionais. 
                           <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-primary ml-1">
-                            Get your API key
+                            Obter sua chave API
                           </a>
                         </p>
                       </div>
@@ -253,7 +253,7 @@ export default function Settings() {
                               <i className="ri-loader-4-line animate-spin mr-2"></i>
                               Saving...
                             </>
-                          ) : "Save API Keys"}
+                          ) : "Salvar Chaves API"}
                         </Button>
                       </div>
                     </CardContent>
@@ -264,14 +264,14 @@ export default function Settings() {
                 <TabsContent value="notifications">
                   <Card>
                     <CardHeader>
-                      <CardTitle>Notification Preferences</CardTitle>
+                      <CardTitle>Preferências de Notificação</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
                           <div className="space-y-0.5">
-                            <Label>Email Alerts</Label>
-                            <p className="text-sm text-gray-500">Receive important alerts via email</p>
+                            <Label>Alertas por Email</Label>
+                            <p className="text-sm text-gray-500">Receba alertas importantes por email</p>
                           </div>
                           <Switch 
                             checked={notifications.emailAlerts}
@@ -283,8 +283,8 @@ export default function Settings() {
                         
                         <div className="flex items-center justify-between">
                           <div className="space-y-0.5">
-                            <Label>Data Processing Notifications</Label>
-                            <p className="text-sm text-gray-500">Get notified when your data has finished processing</p>
+                            <Label>Notificações de Processamento</Label>
+                            <p className="text-sm text-gray-500">Seja notificado quando seus dados terminarem de processar</p>
                           </div>
                           <Switch 
                             checked={notifications.dataProcessingNotifications}
@@ -296,8 +296,8 @@ export default function Settings() {
                         
                         <div className="flex items-center justify-between">
                           <div className="space-y-0.5">
-                            <Label>Marketplace Updates</Label>
-                            <p className="text-sm text-gray-500">Receive updates about new datasets in the marketplace</p>
+                            <Label>Atualizações do Marketplace</Label>
+                            <p className="text-sm text-gray-500">Receba atualizações sobre novos datasets no marketplace</p>
                           </div>
                           <Switch 
                             checked={notifications.marketplaceUpdates}
@@ -309,8 +309,8 @@ export default function Settings() {
                         
                         <div className="flex items-center justify-between">
                           <div className="space-y-0.5">
-                            <Label>Weekly Reports</Label>
-                            <p className="text-sm text-gray-500">Receive weekly summaries of your data insights</p>
+                            <Label>Relatórios Semanais</Label>
+                            <p className="text-sm text-gray-500">Receba resumos semanais dos seus insights de dados</p>
                           </div>
                           <Switch 
                             checked={notifications.weeklyReports}
@@ -325,7 +325,7 @@ export default function Settings() {
                                 <i className="ri-loader-4-line animate-spin mr-2"></i>
                                 Saving...
                               </>
-                            ) : "Save Preferences"}
+                            ) : "Salvar Preferências"}
                           </Button>
                         </div>
                       </div>
@@ -337,15 +337,15 @@ export default function Settings() {
                 <TabsContent value="privacy">
                   <Card>
                     <CardHeader>
-                      <CardTitle>Privacy Settings</CardTitle>
+                      <CardTitle>Configurações de Privacidade</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
                           <div className="space-y-0.5">
-                            <Label>Share Analytics with Osorno</Label>
+                            <Label>Compartilhar Analytics com Osorno</Label>
                             <p className="text-sm text-gray-500">
-                              Allow Osorno to collect anonymous usage data to improve the platform
+                              Permitir que a Osorno colete dados de uso anônimos para melhorar a plataforma
                             </p>
                           </div>
                           <Switch 
@@ -358,9 +358,9 @@ export default function Settings() {
                         
                         <div className="flex items-center justify-between">
                           <div className="space-y-0.5">
-                            <Label>Allow Data Indexing</Label>
+                            <Label>Permitir Indexação de Dados</Label>
                             <p className="text-sm text-gray-500">
-                              Allow your public datasets to be indexed for discovery in the marketplace
+                              Permitir que seus datasets públicos sejam indexados para descoberta no marketplace
                             </p>
                           </div>
                           <Switch 
@@ -376,7 +376,7 @@ export default function Settings() {
                                 <i className="ri-loader-4-line animate-spin mr-2"></i>
                                 Saving...
                               </>
-                            ) : "Save Privacy Settings"}
+                            ) : "Salvar Configurações de Privacidade"}
                           </Button>
                         </div>
                       </div>

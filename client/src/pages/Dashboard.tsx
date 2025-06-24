@@ -30,7 +30,7 @@ export default function Dashboard() {
                 className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                 onClick={() => setSidebarOpen(false)}
               >
-                <span className="sr-only">Close sidebar</span>
+                <span className="sr-only">Fechar barra lateral</span>
                 <i className="ri-close-line text-white text-2xl"></i>
               </button>
             </div>
@@ -47,20 +47,20 @@ export default function Dashboard() {
           <div className="py-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">Welcome to Osorno</h1>
-                <p className="text-xl text-gray-600 mb-8">Transform your data into actionable insights with AI-powered analytics</p>
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">Bem-vindo à Osorno</h1>
+                <p className="text-xl text-gray-600 mb-8">Transforme seus dados em insights acionáveis com análises alimentadas por IA</p>
                 
                 <div className="flex justify-center space-x-4">
                   <Link href="/mydata">
                     <Button size="lg" className="bg-primary hover:bg-primary/90">
                       <i className="ri-database-2-line mr-2"></i>
-                      Connect Data
+                      Conectar Dados
                     </Button>
                   </Link>
                   <Link href="/askdata">
                     <Button size="lg" variant="outline">
                       <i className="ri-chat-3-line mr-2"></i>
-                      Ask Questions
+                      Fazer Perguntas
                     </Button>
                   </Link>
                 </div>
@@ -72,10 +72,10 @@ export default function Dashboard() {
                     <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <i className="ri-upload-cloud-line text-3xl text-orange-600"></i>
                     </div>
-                    <CardTitle className="text-gray-700">Connect Your Data</CardTitle>
+                    <CardTitle className="text-gray-700">Conecte Seus Dados</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Upload files or connect to databases. Our AI automatically detects patterns and suggests the best analysis approach.</p>
+                    <p className="text-gray-600">Faça upload de arquivos ou conecte-se a bancos de dados. Nossa IA detecta automaticamente padrões e sugere a melhor abordagem de análise.</p>
                   </CardContent>
                 </Card>
 
@@ -84,10 +84,10 @@ export default function Dashboard() {
                     <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <i className="ri-robot-line text-3xl text-gray-600"></i>
                     </div>
-                    <CardTitle className="text-gray-700">AI-Powered Analysis</CardTitle>
+                    <CardTitle className="text-gray-700">Análise com IA</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Let our AI analyze your data and generate interactive dashboards with key performance indicators tailored to your business.</p>
+                    <p className="text-gray-600">Deixe nossa IA analisar seus dados e gerar dashboards interativos com indicadores-chave de performance personalizados para seu negócio.</p>
                   </CardContent>
                 </Card>
 
@@ -96,10 +96,10 @@ export default function Dashboard() {
                     <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <i className="ri-chat-3-line text-3xl text-orange-600"></i>
                     </div>
-                    <CardTitle className="text-gray-700">Ask Questions</CardTitle>
+                    <CardTitle className="text-gray-700">Faça Perguntas</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">Have a conversation with your data. Ask questions in plain English and get instant insights with charts and explanations.</p>
+                    <p className="text-gray-600">Tenha uma conversa com seus dados. Faça perguntas em português simples e obtenha insights instantâneos com gráficos e explicações.</p>
                   </CardContent>
                 </Card>
               </div>
@@ -108,12 +108,12 @@ export default function Dashboard() {
                 <CardContent className="p-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
-                      <h2 className="text-2xl font-bold mb-4">Ready to get started?</h2>
-                      <p className="text-lg mb-6 opacity-90">Experience the power of AI-driven analytics with your own data. Upload a file or connect to your database and see insights in minutes.</p>
+                      <h2 className="text-2xl font-bold mb-4">Pronto para começar?</h2>
+                      <p className="text-lg mb-6 opacity-90">Experimente o poder da análise orientada por IA com seus próprios dados. Faça upload de um arquivo ou conecte-se ao seu banco de dados e veja insights em minutos.</p>
                       <Link href="/mydata">
                         <Button size="lg" variant="secondary" className="bg-white text-orange-600 hover:bg-gray-50">
                           <i className="ri-arrow-right-line mr-2"></i>
-                          Start Demo
+                          Iniciar Demo
                         </Button>
                       </Link>
                     </div>
