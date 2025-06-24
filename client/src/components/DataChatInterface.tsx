@@ -56,57 +56,61 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
   const generateMockResponse = (query: string): { content: string; chartData?: any[]; chartType?: string } => {
     const lowerQuery = query.toLowerCase();
 
-    if (lowerQuery.includes('revenue') || lowerQuery.includes('sales by month')) {
+    // Português: "Mostre-me a receita por mês" ou palavras relacionadas
+    if (lowerQuery.includes('receita') || lowerQuery.includes('mês') || lowerQuery.includes('monthly') || lowerQuery.includes('revenue')) {
       return {
-        content: "Here's your monthly revenue trend. I can see that May and December were your strongest months, with May hitting $401K and December reaching $492K. There's a clear upward trend throughout the year with a 15.2% growth compared to last year.",
+        content: "Aqui está a tendência da sua receita mensal. Posso ver que maio e dezembro foram seus meses mais fortes, com maio atingindo R$ 401K e dezembro chegando a R$ 492K. Há uma clara tendência de crescimento ao longo do ano com 15,2% de crescimento comparado ao ano passado.",
         chartData: [
           { month: 'Jan', revenue: 245000 },
-          { month: 'Feb', revenue: 198000 },
+          { month: 'Fev', revenue: 198000 },
           { month: 'Mar', revenue: 312000 },
-          { month: 'Apr', revenue: 289000 },
-          { month: 'May', revenue: 401000 },
+          { month: 'Abr', revenue: 289000 },
+          { month: 'Mai', revenue: 401000 },
           { month: 'Jun', revenue: 378000 },
           { month: 'Jul', revenue: 423000 },
-          { month: 'Aug', revenue: 395000 },
-          { month: 'Sep', revenue: 445000 },
-          { month: 'Oct', revenue: 421000 },
+          { month: 'Ago', revenue: 395000 },
+          { month: 'Set', revenue: 445000 },
+          { month: 'Out', revenue: 421000 },
           { month: 'Nov', revenue: 467000 },
-          { month: 'Dec', revenue: 492000 }
+          { month: 'Dez', revenue: 492000 }
         ],
         chartType: 'line'
       };
     }
 
-    if (lowerQuery.includes('region') || lowerQuery.includes('geographic')) {
+    // Português: "Qual região está tendo melhor desempenho?"
+    if (lowerQuery.includes('região') || lowerQuery.includes('region') || lowerQuery.includes('desempenho') || lowerQuery.includes('performance')) {
       return {
-        content: "Your regional performance shows North America leading with $1.25M in sales and 15.2% growth. Asia Pacific is your fastest growing region at 22.1% growth with $756K in sales. Latin America needs attention with a -3.4% decline.",
+        content: "O desempenho regional mostra a América do Norte liderando com R$ 1,25M em vendas e 15,2% de crescimento. A Ásia-Pacífico é sua região de crescimento mais rápido com 22,1% de crescimento e R$ 756K em vendas. A América Latina precisa de atenção com declínio de -3,4%.",
         chartData: [
-          { region: 'North America', sales: 1250000 },
-          { region: 'Europe', sales: 980000 },
-          { region: 'Asia Pacific', sales: 756000 },
-          { region: 'Latin America', sales: 340000 },
-          { region: 'Middle East', sales: 189000 }
+          { region: 'América do Norte', sales: 1250000 },
+          { region: 'Europa', sales: 980000 },
+          { region: 'Ásia-Pacífico', sales: 756000 },
+          { region: 'América Latina', sales: 340000 },
+          { region: 'Oriente Médio', sales: 189000 }
         ],
         chartType: 'bar'
       };
     }
 
-    if (lowerQuery.includes('product') || lowerQuery.includes('category')) {
+    // Português: "Qual é a divisão do nosso mix de produtos?"
+    if (lowerQuery.includes('produto') || lowerQuery.includes('mix') || lowerQuery.includes('divisão') || lowerQuery.includes('category')) {
       return {
-        content: "Software Licenses dominate your product mix at 45% of revenue ($2.1M), followed by Professional Services at 25% ($1.17M). Training represents the smallest segment but offers growth opportunities.",
+        content: "Licenças de Software dominam seu mix de produtos com 45% da receita (R$ 2,1M), seguido por Serviços Profissionais com 25% (R$ 1,17M). Treinamento representa o menor segmento, mas oferece oportunidades de crescimento.",
         chartData: [
-          { name: 'Software Licenses', value: 45, revenue: 2100000 },
-          { name: 'Professional Services', value: 25, revenue: 1175000 },
-          { name: 'Support & Maintenance', value: 20, revenue: 940000 },
-          { name: 'Training', value: 10, revenue: 470000 }
+          { name: 'Licenças de Software', value: 45, revenue: 2100000 },
+          { name: 'Serviços Profissionais', value: 25, revenue: 1175000 },
+          { name: 'Suporte e Manutenção', value: 20, revenue: 940000 },
+          { name: 'Treinamento', value: 10, revenue: 470000 }
         ],
         chartType: 'pie'
       };
     }
 
-    if (lowerQuery.includes('top') || lowerQuery.includes('best') || lowerQuery.includes('performer')) {
+    // Português: "Quem são nossos melhores performers?"
+    if (lowerQuery.includes('melhor') || lowerQuery.includes('performer') || lowerQuery.includes('top') || lowerQuery.includes('quem')) {
       return {
-        content: "Sarah Johnson is your top performer with $850K in revenue from 45 deals, achieving 120% of quota. Mike Chen and Emily Rodriguez are also exceeding targets. Consider analyzing what makes these reps successful and scaling those practices.",
+        content: "Sarah Johnson é sua melhor vendedora com R$ 850K em receita de 45 negócios, atingindo 120% da meta. Mike Chen e Emily Rodriguez também estão superando as metas. Considere analisar o que torna estes vendedores bem-sucedidos e escalar essas práticas.",
         chartData: [
           { name: 'Sarah Johnson', revenue: 850000, quota: 120 },
           { name: 'Mike Chen', revenue: 720000, quota: 95 },
@@ -118,9 +122,10 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
       };
     }
 
-    if (lowerQuery.includes('forecast') || lowerQuery.includes('predict') || lowerQuery.includes('next')) {
+    // Português: "Você pode prever o próximo trimestre?"
+    if (lowerQuery.includes('prever') || lowerQuery.includes('próximo') || lowerQuery.includes('trimestre') || lowerQuery.includes('forecast') || lowerQuery.includes('predict')) {
       return {
-        content: "Based on current trends, I predict Q1 2025 revenue will reach $1.35M, representing 18% growth. The model considers seasonal patterns, pipeline velocity, and market conditions. Key drivers include expanded Asia Pacific presence and new product launches.",
+        content: "Com base nas tendências atuais, prevejo que a receita do Q1 2025 chegará a R$ 1,35M, representando 18% de crescimento. O modelo considera padrões sazonais, velocidade do pipeline e condições de mercado. Os principais impulsionadores incluem presença expandida na Ásia-Pacífico e novos lançamentos de produtos.",
         chartData: [
           { quarter: 'Q1 2024', actual: 755000, predicted: null },
           { quarter: 'Q2 2024', actual: 1068000, predicted: null },
@@ -133,12 +138,19 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
       };
     }
 
-    // Default responses for various business questions
+    // Português: "O que está impulsionando nosso crescimento?"
+    if (lowerQuery.includes('impulsionando') || lowerQuery.includes('crescimento') || lowerQuery.includes('driving') || lowerQuery.includes('growth')) {
+      return {
+        content: "Seu crescimento está sendo impulsionado principalmente por três fatores: (1) Expansão no segmento enterprise (+28%), (2) Aumento do ticket médio (+15,7%), e (3) Melhoria na retenção de clientes (95%). A estratégia de upselling tem sido particularmente efetiva, gerando 34% mais receita por cliente existente."
+      };
+    }
+
+    // Respostas padrão para várias perguntas de negócio
     const defaultResponses = [
-      "Based on your data, I notice some interesting patterns. Your conversion rate has decreased slightly to 20%, but your average deal size increased by 5.7% to $16.9K. This suggests you're closing fewer but higher-value deals.",
-      "Your sales team is performing well overall. The data shows consistent growth across most metrics, with particularly strong performance in the enterprise segment.",
-      "Looking at your customer acquisition trends, there's been a shift toward higher-value customers. This aligns with your premium positioning strategy.",
-      "The data indicates seasonal patterns in your business, with Q4 traditionally being your strongest quarter. Consider adjusting your forecasting models accordingly."
+      "Com base nos seus dados, noto alguns padrões interessantes. Sua taxa de conversão diminuiu ligeiramente para 20%, mas o tamanho médio do negócio aumentou 5,7% para R$ 16,9K. Isso sugere que você está fechando menos negócios, mas de maior valor.",
+      "Sua equipe de vendas está tendo um bom desempenho geral. Os dados mostram crescimento consistente na maioria das métricas, com desempenho particularmente forte no segmento enterprise.",
+      "Observando suas tendências de aquisição de clientes, houve uma mudança para clientes de maior valor. Isso se alinha com sua estratégia de posicionamento premium.",
+      "Os dados indicam padrões sazonais em seu negócio, com Q4 tradicionalmente sendo seu trimestre mais forte. Considere ajustar seus modelos de previsão adequadamente."
     ];
 
     return {

@@ -20,6 +20,7 @@ A prototype AI-powered data platform designed to validate the concept with poten
 - Applied Osorno branding with logo and orange color scheme (#FF7A00)
 - Updated all charts and UI components to match brand colors
 - Translated entire interface to Portuguese (Brazil)
+- Fixed AI chat interface to properly respond to Portuguese suggested questions
 
 ## Key Features
 1. **Simulated Data Upload**: Mock Excel file processing with realistic animations
