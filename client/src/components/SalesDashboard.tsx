@@ -215,7 +215,7 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
         <TabsContent value="regions" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Regional Sales Performance</CardTitle>
+              <CardTitle>Performance de Vendas Regional</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -241,7 +241,7 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
-                <CardTitle>Revenue by Product Category</CardTitle>
+                <CardTitle>Receita por Categoria de Produto</CardTitle>
               </CardHeader>
               <CardContent>
                 <ResponsiveContainer width="100%" height={300}>
@@ -265,7 +265,7 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
 
             <Card>
               <CardHeader>
-                <CardTitle>Product Category Details</CardTitle>
+                <CardTitle>Detalhes das Categorias de Produto</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
@@ -293,7 +293,7 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
         <TabsContent value="team" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Sales Rep Leaderboard</CardTitle>
+              <CardTitle>Ranking dos Representantes de Vendas</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">

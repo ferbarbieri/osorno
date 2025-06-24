@@ -15,14 +15,14 @@ export default function TopBar({ title, onToggleSidebar }: TopBarProps) {
         className="md:hidden px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
         onClick={onToggleSidebar}
       >
-        <span className="sr-only">Open sidebar</span>
+        <span className="sr-only">Abrir barra lateral</span>
         <i className="ri-menu-line text-xl"></i>
       </button>
       <div className="flex-1 px-4 flex justify-between">
         <div className="flex-1 flex">
           <div className="w-full flex md:ml-0">
             <label htmlFor="search-field" className="sr-only">
-              Search
+              Buscar
             </label>
             <div className="relative w-full text-gray-400 focus-within:text-gray-600">
               <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none">
@@ -44,14 +44,14 @@ export default function TopBar({ title, onToggleSidebar }: TopBarProps) {
             type="button"
             className="p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
           >
-            <span className="sr-only">View notifications</span>
+            <span className="sr-only">Ver notificações</span>
             <i className="ri-notification-3-line text-xl"></i>
           </button>
           <button
             type="button"
             className="ml-3 p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
           >
-            <span className="sr-only">Help</span>
+            <span className="sr-only">Ajuda</span>
             <i className="ri-question-line text-xl"></i>
           </button>
         </div>

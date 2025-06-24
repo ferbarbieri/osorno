@@ -57,7 +57,7 @@ export default function MyData() {
       {/* Main content */}
       <div className="flex flex-col w-0 flex-1 overflow-hidden">
         <TopBar 
-          title={currentView === 'upload' ? "Connect Your Data" : "Sales Analytics"} 
+          title={currentView === 'upload' ? "Conecte Seus Dados" : "Analytics de Vendas"} 
           onToggleSidebar={toggleSidebar} 
         />
 

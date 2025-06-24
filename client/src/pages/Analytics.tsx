@@ -80,15 +80,15 @@ export default function Analytics() {
               <div className="mt-6">
                 <Tabs defaultValue="charts">
                   <TabsList>
-                    <TabsTrigger value="charts">Charts</TabsTrigger>
-                    <TabsTrigger value="reports">Reports</TabsTrigger>
+                    <TabsTrigger value="charts">Gráficos</TabsTrigger>
+                    <TabsTrigger value="reports">Relatórios</TabsTrigger>
                     <TabsTrigger value="dashboards">Dashboards</TabsTrigger>
                   </TabsList>
                   
                   <TabsContent value="charts" className="mt-4 space-y-6">
                     <Card>
                       <CardContent className="p-6">
-                        <h2 className="text-lg font-medium mb-4">Regional Sales Comparison</h2>
+                        <h2 className="text-lg font-medium mb-4">Comparação de Vendas Regionais</h2>
                         <div className="h-80">
                           <ResponsiveContainer width="100%" height="100%">
                             <BarChart
@@ -111,7 +111,7 @@ export default function Analytics() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <Card>
                         <CardContent className="p-6">
-                          <h2 className="text-lg font-medium mb-4">Monthly Trend</h2>
+                          <h2 className="text-lg font-medium mb-4">Tendência Mensal</h2>
                           <div className="h-64">
                             <ResponsiveContainer width="100%" height="100%">
                               <LineChart
@@ -132,7 +132,7 @@ export default function Analytics() {
                       
                       <Card>
                         <CardContent className="p-6">
-                          <h2 className="text-lg font-medium mb-4">Category Distribution</h2>
+                          <h2 className="text-lg font-medium mb-4">Distribuição por Categoria</h2>
                           <div className="h-64">
                             <ResponsiveContainer width="100%" height="100%">
                               <PieChart>

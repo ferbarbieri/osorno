@@ -185,12 +185,12 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
   };
 
   const suggestedQuestions = [
-    "Show me revenue by month",
-    "Which region is performing best?",
-    "What's our product mix breakdown?",
-    "Who are our top performers?",
-    "Can you forecast next quarter?",
-    "What's driving our growth?"
+    "Mostre-me a receita por mês",
+    "Qual região está tendo melhor desempenho?",
+    "Qual é a divisão do nosso mix de produtos?",
+    "Quem são nossos melhores performers?",
+    "Você pode prever o próximo trimestre?",
+    "O que está impulsionando nosso crescimento?"
   ];
 
   const renderChart = (message: Message) => {
@@ -265,7 +265,7 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center">
               <i className="ri-robot-line text-primary mr-2"></i>
-              AI Data Assistant
+Assistente de Dados IA
             </CardTitle>
             <Button variant="ghost" size="sm" onClick={onClose}>
               <i className="ri-close-line"></i>
@@ -281,7 +281,7 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
                 <div className={`flex max-w-[80%] ${message.isUser ? 'flex-row-reverse' : 'flex-row'}`}>
                   <Avatar className="w-8 h-8 mt-1">
                     <AvatarFallback className={message.isUser ? 'bg-primary text-white' : 'bg-gray-100'}>
-                      {message.isUser ? 'You' : 'AI'}
+                      {message.isUser ? 'Você' : 'IA'}
                     </AvatarFallback>
                   </Avatar>
                   
@@ -308,7 +308,7 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
               <div className="flex justify-start">
                 <div className="flex">
                   <Avatar className="w-8 h-8 mt-1">
-                    <AvatarFallback className="bg-gray-100">AI</AvatarFallback>
+                    <AvatarFallback className="bg-gray-100">IA</AvatarFallback>
                   </Avatar>
                   <div className="mx-3">
                     <div className="inline-block p-3 rounded-lg bg-gray-100">
@@ -328,7 +328,7 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
           {/* Suggested Questions */}
           {messages.length === 1 && (
             <div className="border-t p-4">
-              <p className="text-sm text-gray-600 mb-3">Try asking:</p>
+              <p className="text-sm text-gray-600 mb-3">Experimente perguntar:</p>
               <div className="flex flex-wrap gap-2">
                 {suggestedQuestions.map((question, idx) => (
                   <Badge
@@ -351,7 +351,7 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Ask a question about your data..."
+                placeholder="Faça uma pergunta sobre seus dados..."
                 className="flex-1"
                 disabled={isTyping}
               />

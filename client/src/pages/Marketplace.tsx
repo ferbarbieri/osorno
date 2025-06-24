@@ -62,8 +62,8 @@ export default function Marketplace() {
         <main className="flex-1 relative overflow-y-auto focus:outline-none">
           <div className="py-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-              <h1 className="text-2xl font-semibold text-gray-900">Data Marketplace</h1>
-              <p className="mt-2 text-gray-600">Discover valuable datasets or monetize your own data</p>
+              <h1 className="text-2xl font-semibold text-gray-900">Marketplace de Dados</h1>
+              <p className="mt-2 text-gray-600">Descubra datasets valiosos ou monetize seus próprios dados</p>
             </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               {/* Search and filter */}
@@ -77,7 +77,7 @@ export default function Marketplace() {
                         </div>
                         <Input
                           type="text"
-                          placeholder="Search for datasets..."
+                          placeholder="Buscar por datasets..."
                           className="pl-10"
                           value={searchQuery}
                           onChange={(e) => setSearchQuery(e.target.value)}
@@ -86,7 +86,7 @@ export default function Marketplace() {
                     </div>
                     <div className="flex-shrink-0">
                       <Button className="w-full md:w-auto">
-                        <i className="ri-store-2-line mr-1"></i> List My Data
+                        <i className="ri-store-2-line mr-1"></i> Listar Meus Dados
                       </Button>
                     </div>
                   </div>
@@ -97,9 +97,9 @@ export default function Marketplace() {
               <div className="mt-6">
                 <Tabs defaultValue="browse">
                   <TabsList>
-                    <TabsTrigger value="browse">Browse</TabsTrigger>
-                    <TabsTrigger value="purchased">Purchased</TabsTrigger>
-                    <TabsTrigger value="selling">My Listings</TabsTrigger>
+                    <TabsTrigger value="browse">Navegar</TabsTrigger>
+                    <TabsTrigger value="purchased">Comprados</TabsTrigger>
+                    <TabsTrigger value="selling">Meus Anúncios</TabsTrigger>
                   </TabsList>
                   
                   <TabsContent value="browse" className="mt-4">
@@ -120,7 +120,7 @@ export default function Marketplace() {
                       ) : (
                         <div className="col-span-3 py-10 text-center">
                           <p className="text-gray-500">
-                            {searchQuery ? 'No matching items found' : 'No marketplace items available'}
+                            {searchQuery ? 'Nenhum item encontrado' : 'Nenhum item disponível no marketplace'}
                           </p>
                         </div>
                       )}
@@ -132,9 +132,9 @@ export default function Marketplace() {
                       <CardContent className="p-6">
                         <div className="text-center py-10">
                           <i className="ri-shopping-cart-line text-4xl text-gray-300"></i>
-                          <p className="mt-2 text-gray-500">You haven't purchased any datasets yet</p>
+                          <p className="mt-2 text-gray-500">Você ainda não comprou nenhum dataset</p>
                           <Button className="mt-4">
-                            Browse Marketplace
+                            Navegar Marketplace
                           </Button>
                         </div>
                       </CardContent>
@@ -146,9 +146,9 @@ export default function Marketplace() {
                       <CardContent className="p-6">
                         <div className="text-center py-10">
                           <i className="ri-price-tag-3-line text-4xl text-gray-300"></i>
-                          <p className="mt-2 text-gray-500">You aren't selling any datasets yet</p>
+                          <p className="mt-2 text-gray-500">Você ainda não está vendendo nenhum dataset</p>
                           <Button className="mt-4">
-                            <i className="ri-add-line mr-1"></i> List My Data
+                            <i className="ri-add-line mr-1"></i> Listar Meus Dados
                           </Button>
                         </div>
                       </CardContent>

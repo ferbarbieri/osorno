@@ -298,18 +298,18 @@ Análise do Dataset Completa
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="database">Database Name</Label>
+              <Label htmlFor="database">Nome do Banco</Label>
               <Input 
                 id="database" 
                 value={dbConfig.database}
                 onChange={(e) => setDbConfig({...dbConfig, database: e.target.value})}
-                placeholder="sales_db"
+                placeholder="vendas_db"
               />
             </div>
             
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="username">Username</Label>
+                <Label htmlFor="username">Usuário</Label>
                 <Input 
                   id="username" 
                   value={dbConfig.username}
@@ -318,7 +318,7 @@ Análise do Dataset Completa
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="password">Password</Label>
+                <Label htmlFor="password">Senha</Label>
                 <Input 
                   id="password" 
                   type="password"
@@ -330,7 +330,7 @@ Análise do Dataset Completa
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="table">Table/View (Optional)</Label>
+              <Label htmlFor="table">Tabela/View (Opcional)</Label>
               <Input 
                 id="table" 
                 value={dbConfig.table}
@@ -341,11 +341,11 @@ Análise do Dataset Completa
             
             <Button onClick={simulateDbConnection} className="w-full">
               <i className="ri-database-2-line mr-2"></i>
-              Connect & Analyze
+Conectar e Analisar
             </Button>
             
             <p className="text-sm text-gray-500 text-center">
-              For demo purposes, this will simulate connecting to a sales database
+Para fins de demonstração, isso simulará a conexão com um banco de dados de vendas
             </p>
           </TabsContent>
         </Tabs>

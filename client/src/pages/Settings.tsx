@@ -76,8 +76,8 @@ export default function Settings() {
     setTimeout(() => {
       setLoading(false);
       toast({
-        title: "Settings saved",
-        description: "Your settings have been saved successfully.",
+        title: "Configurações salvas",
+        description: "Suas configurações foram salvas com sucesso.",
       });
     }, 1000);
   };
@@ -116,29 +116,29 @@ export default function Settings() {
         <main className="flex-1 relative overflow-y-auto focus:outline-none">
           <div className="py-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-              <h1 className="text-2xl font-semibold text-gray-900">Settings</h1>
-              <p className="mt-2 text-gray-600">Manage your account and application preferences</p>
+              <h1 className="text-2xl font-semibold text-gray-900">Configurações</h1>
+              <p className="mt-2 text-gray-600">Gerencie sua conta e preferências da aplicação</p>
             </div>
             
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 mt-6">
               <Tabs defaultValue="profile">
                 <TabsList className="mb-4">
-                  <TabsTrigger value="profile">Profile</TabsTrigger>
-                  <TabsTrigger value="api">API Keys</TabsTrigger>
-                  <TabsTrigger value="notifications">Notifications</TabsTrigger>
-                  <TabsTrigger value="privacy">Privacy</TabsTrigger>
+                  <TabsTrigger value="profile">Perfil</TabsTrigger>
+                  <TabsTrigger value="api">Chaves API</TabsTrigger>
+                  <TabsTrigger value="notifications">Notificações</TabsTrigger>
+                  <TabsTrigger value="privacy">Privacidade</TabsTrigger>
                 </TabsList>
                 
                 {/* Profile Settings */}
                 <TabsContent value="profile">
                   <Card>
                     <CardHeader>
-                      <CardTitle>Profile Information</CardTitle>
+                      <CardTitle>Informações do Perfil</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="name">Full Name</Label>
+                          <Label htmlFor="name">Nome Completo</Label>
                           <Input 
                             id="name" 
                             name="name" 
