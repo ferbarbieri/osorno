@@ -272,7 +272,7 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <Card className="w-full max-w-4xl max-h-[90vh] flex flex-col">
+      <Card className="w-full max-w-4xl h-[700px] flex flex-col">
         <CardHeader className="border-b">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center">
@@ -285,7 +285,7 @@ Assistente de Dados IA
           </div>
         </CardHeader>
         
-        <CardContent className="flex-1 flex flex-col p-0">
+        <CardContent className="flex-1 flex flex-col p-0 overflow-hidden">
           {/* Messages Area */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {messages.map((message) => (
