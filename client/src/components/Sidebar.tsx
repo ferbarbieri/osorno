@@ -30,9 +30,9 @@ export default function Sidebar() {
           <nav className="mt-2 flex-1 px-2 space-y-1">
             {sidebarItems.map((item) => (
               <Link key={item.path} href={item.path}>
-                <a
+                <span
                   className={cn(
-                    "group flex items-center px-2 py-3 text-sm font-medium rounded-md",
+                    "group flex items-center px-2 py-3 text-sm font-medium rounded-md cursor-pointer",
                     location === item.path
                       ? "bg-primary-50 text-primary"
                       : "text-gray-600 hover:bg-gray-50"
@@ -40,7 +40,7 @@ export default function Sidebar() {
                 >
                   <i className={`${item.icon} text-xl mr-3`}></i>
                   {item.name}
-                </a>
+                </span>
               </Link>
             ))}
           </nav>
