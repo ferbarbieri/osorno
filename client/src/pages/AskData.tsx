@@ -44,7 +44,7 @@ export default function AskData() {
 
       {/* Main content */}
       <div className="flex flex-col w-0 flex-1 overflow-hidden">
-        <TopBar title="Ask Data" onToggleSidebar={toggleSidebar} />
+        <TopBar title="Perguntar aos Dados" onToggleSidebar={toggleSidebar} />
 
         <main className="flex-1 relative overflow-y-auto focus:outline-none bg-gray-50">
           <div className="h-full flex items-center justify-center p-6">

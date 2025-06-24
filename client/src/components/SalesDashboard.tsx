@@ -81,17 +81,17 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
       {/* Header */}
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Sales Dashboard</h1>
-          <p className="text-gray-600 mt-1">Real-time insights into your sales performance</p>
+          <h1 className="text-3xl font-bold text-gray-900">Dashboard de Vendas</h1>
+          <p className="text-gray-600 mt-1">Insights em tempo real sobre sua performance de vendas</p>
         </div>
         <div className="flex space-x-3">
           <Button variant="outline">
             <i className="ri-download-line mr-2"></i>
-            Export Report
+            Exportar Relatório
           </Button>
           <Button onClick={onStartChat}>
             <i className="ri-chat-3-line mr-2"></i>
-            Ask Questions
+            Fazer Perguntas
           </Button>
         </div>
       </div>
@@ -102,14 +102,14 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Total Revenue</p>
-                <p className="text-3xl font-bold text-gray-900">$4.21M</p>
+                <p className="text-sm font-medium text-gray-600">Receita Total</p>
+                <p className="text-3xl font-bold text-gray-900">R$ 4,21M</p>
                 <div className="flex items-center mt-2">
                   <Badge className="bg-green-100 text-green-800">
                     <i className="ri-arrow-up-line mr-1"></i>
-                    +12.5%
+                    +12,5%
                   </Badge>
-                  <span className="text-sm text-gray-500 ml-2">vs last quarter</span>
+                  <span className="text-sm text-gray-500 ml-2">vs último trimestre</span>
                 </div>
               </div>
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -123,14 +123,14 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Deals Closed</p>
+                <p className="text-sm font-medium text-gray-600">Negócios Fechados</p>
                 <p className="text-3xl font-bold text-gray-900">249</p>
                 <div className="flex items-center mt-2">
                   <Badge className="bg-green-100 text-green-800">
                     <i className="ri-arrow-up-line mr-1"></i>
-                    +8.2%
+                    +8,2%
                   </Badge>
-                  <span className="text-sm text-gray-500 ml-2">vs last quarter</span>
+                  <span className="text-sm text-gray-500 ml-2">vs último trimestre</span>
                 </div>
               </div>
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -144,14 +144,14 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Conversion Rate</p>
-                <p className="text-3xl font-bold text-gray-900">20.0%</p>
+                <p className="text-sm font-medium text-gray-600">Taxa de Conversão</p>
+                <p className="text-3xl font-bold text-gray-900">20,0%</p>
                 <div className="flex items-center mt-2">
                   <Badge className="bg-red-100 text-red-800">
                     <i className="ri-arrow-down-line mr-1"></i>
-                    -2.1%
+                    -2,1%
                   </Badge>
-                  <span className="text-sm text-gray-500 ml-2">vs last quarter</span>
+                  <span className="text-sm text-gray-500 ml-2">vs último trimestre</span>
                 </div>
               </div>
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -165,14 +165,14 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">Avg Deal Size</p>
-                <p className="text-3xl font-bold text-gray-900">$16.9K</p>
+                <p className="text-sm font-medium text-gray-600">Ticket Médio</p>
+                <p className="text-3xl font-bold text-gray-900">R$ 16,9K</p>
                 <div className="flex items-center mt-2">
                   <Badge className="bg-green-100 text-green-800">
                     <i className="ri-arrow-up-line mr-1"></i>
-                    +5.7%
+                    +5,7%
                   </Badge>
-                  <span className="text-sm text-gray-500 ml-2">vs last quarter</span>
+                  <span className="text-sm text-gray-500 ml-2">vs último trimestre</span>
                 </div>
               </div>
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
@@ -186,16 +186,16 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
       {/* Charts Section */}
       <Tabs defaultValue="revenue" className="space-y-4">
         <TabsList>
-          <TabsTrigger value="revenue">Revenue Trends</TabsTrigger>
-          <TabsTrigger value="regions">Regional Performance</TabsTrigger>
-          <TabsTrigger value="products">Product Mix</TabsTrigger>
-          <TabsTrigger value="team">Team Performance</TabsTrigger>
+          <TabsTrigger value="revenue">Tendências de Receita</TabsTrigger>
+          <TabsTrigger value="regions">Performance Regional</TabsTrigger>
+          <TabsTrigger value="products">Mix de Produtos</TabsTrigger>
+          <TabsTrigger value="team">Performance da Equipe</TabsTrigger>
         </TabsList>
 
         <TabsContent value="revenue" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Monthly Revenue vs Target</CardTitle>
+              <CardTitle>Receita Mensal vs Meta</CardTitle>
             </CardHeader>
             <CardContent>
               <ResponsiveContainer width="100%" height={400}>

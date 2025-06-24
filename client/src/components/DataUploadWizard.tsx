@@ -132,7 +132,7 @@ export default function DataUploadWizard({ onComplete }: DataUploadWizardProps) 
         <CardHeader>
           <CardTitle className="flex items-center">
             <i className="ri-robot-line text-primary mr-2"></i>
-            AI Processing Your Data
+IA Processando Seus Dados
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
@@ -141,42 +141,42 @@ export default function DataUploadWizard({ onComplete }: DataUploadWizardProps) 
               <div className="absolute inset-0 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
               <div className="absolute inset-2 border-2 border-primary/30 border-b-transparent rounded-full animate-spin animate-reverse"></div>
             </div>
-            <p className="text-lg font-medium">Analyzing your data with AI...</p>
+            <p className="text-lg font-medium">Analisando seus dados com IA...</p>
             <p className="text-gray-600 mt-2">
-              {uploadMethod === 'file' ? 'Processing uploaded file' : 'Connecting to database'}
+              {uploadMethod === 'file' ? 'Processando arquivo carregado' : 'Conectando ao banco de dados'}
             </p>
           </div>
           
           <div className="space-y-2">
             <div className="flex justify-between text-sm">
-              <span>Progress</span>
+              <span>Progresso</span>
               <span>{progress}%</span>
             </div>
             <Progress value={progress} className="h-2" />
           </div>
           
           <div className="bg-gray-50 p-4 rounded-lg">
-            <h4 className="font-medium mb-2">Processing Steps:</h4>
+            <h4 className="font-medium mb-2">Etapas do Processamento:</h4>
             <ul className="space-y-1 text-sm text-gray-600">
               <li className="flex items-center">
                 <i className={`ri-check-line text-green-500 mr-2 ${progress > 20 ? '' : 'opacity-30'}`}></i>
-                Data ingestion
+                Ingestão de dados
               </li>
               <li className="flex items-center">
                 <i className={`ri-check-line text-green-500 mr-2 ${progress > 40 ? '' : 'opacity-30'}`}></i>
-                Schema detection
+                Detecção de esquema
               </li>
               <li className="flex items-center">
                 <i className={`ri-check-line text-green-500 mr-2 ${progress > 60 ? '' : 'opacity-30'}`}></i>
-                Data profiling
+                Perfilagem de dados
               </li>
               <li className="flex items-center">
                 <i className={`ri-check-line text-green-500 mr-2 ${progress > 80 ? '' : 'opacity-30'}`}></i>
-                Pattern recognition
+                Reconhecimento de padrões
               </li>
               <li className="flex items-center">
                 <i className={`ri-check-line text-green-500 mr-2 ${progress > 95 ? '' : 'opacity-30'}`}></i>
-                KPI recommendations
+                Recomendações de KPIs
               </li>
             </ul>
           </div>
@@ -191,23 +191,23 @@ export default function DataUploadWizard({ onComplete }: DataUploadWizardProps) 
         <CardHeader>
           <CardTitle className="flex items-center">
             <i className="ri-database-2-line text-green-500 mr-2"></i>
-            Dataset Analysis Complete
+Análise do Dataset Completa
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="bg-green-50 border border-green-200 p-4 rounded-lg">
             <div className="flex items-center mb-2">
               <i className="ri-check-circle-line text-green-500 mr-2"></i>
-              <span className="font-medium text-green-800">Successfully analyzed your data!</span>
+              <span className="font-medium text-green-800">Dados analisados com sucesso!</span>
             </div>
             <p className="text-green-700">
-              Our AI has identified this as a <strong>{detectedDataset.type}</strong> dataset with {detectedDataset.rows.toLocaleString()} rows and {detectedDataset.columns} columns.
+              Nossa IA identificou este como um dataset de <strong>{detectedDataset.type}</strong> com {detectedDataset.rows.toLocaleString()} linhas e {detectedDataset.columns} colunas.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="font-semibold mb-3">Detected Columns</h3>
+              <h3 className="font-semibold mb-3">Colunas Detectadas</h3>
               <div className="space-y-2">
                 {detectedDataset.detectedColumns.map((col: any, idx: number) => (
                   <div key={idx} className="flex items-center justify-between p-2 bg-gray-50 rounded">
@@ -222,7 +222,7 @@ export default function DataUploadWizard({ onComplete }: DataUploadWizardProps) 
             </div>
 
             <div>
-              <h3 className="font-semibold mb-3">Suggested KPIs</h3>
+              <h3 className="font-semibold mb-3">KPIs Sugeridos</h3>
               <div className="space-y-2">
                 {detectedDataset.suggestedKPIs.map((kpi: string, idx: number) => (
                   <div key={idx} className="flex items-center p-2 bg-blue-50 rounded">
@@ -236,11 +236,11 @@ export default function DataUploadWizard({ onComplete }: DataUploadWizardProps) 
 
           <div className="flex justify-end space-x-3">
             <Button variant="outline" onClick={() => setCurrentStep('input')}>
-              Start Over
+              Recomeçar
             </Button>
             <Button onClick={handleConfirmDataset} className="bg-green-600 hover:bg-green-700">
               <i className="ri-check-line mr-2"></i>
-              Create Dashboard
+              Criar Dashboard
             </Button>
           </div>
         </CardContent>
@@ -251,27 +251,27 @@ export default function DataUploadWizard({ onComplete }: DataUploadWizardProps) 
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
-        <CardTitle>Connect Your Data</CardTitle>
+        <CardTitle>Conecte Seus Dados</CardTitle>
       </CardHeader>
       <CardContent>
         <Tabs value={uploadMethod} onValueChange={(value: any) => setUploadMethod(value)}>
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="file">Upload File</TabsTrigger>
-            <TabsTrigger value="database">Connect Database</TabsTrigger>
+            <TabsTrigger value="file">Carregar Arquivo</TabsTrigger>
+            <TabsTrigger value="database">Conectar Banco</TabsTrigger>
           </TabsList>
           
           <TabsContent value="file" className="space-y-4">
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
               <i className="ri-file-upload-line text-4xl text-gray-400 mb-4"></i>
-              <h3 className="text-lg font-medium mb-2">Upload your data file</h3>
-              <p className="text-gray-600 mb-4">Support for Excel, CSV, and JSON files</p>
+              <h3 className="text-lg font-medium mb-2">Carregue seu arquivo de dados</h3>
+              <p className="text-gray-600 mb-4">Suporte para arquivos Excel, CSV e JSON</p>
               <Button onClick={simulateFileUpload}>
                 <i className="ri-upload-line mr-2"></i>
-                Choose File
+                Escolher Arquivo
               </Button>
             </div>
             <p className="text-sm text-gray-500 text-center">
-              For demo purposes, this will simulate uploading a sales dataset
+              Para fins de demonstração, isso simulará o carregamento de um dataset de vendas
             </p>
           </TabsContent>
           

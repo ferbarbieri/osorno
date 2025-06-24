@@ -36,7 +36,7 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: "Hi! I'm your AI data analyst. I can help you explore your sales data and answer questions about your business performance. What would you like to know?",
+      content: "Olá! Sou seu analista de dados com IA. Posso ajudá-lo a explorar seus dados de vendas e responder perguntas sobre o desempenho do seu negócio. O que gostaria de saber?",
       isUser: false,
       timestamp: new Date()
     }

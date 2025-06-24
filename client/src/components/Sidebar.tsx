@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 
 const sidebarItems = [
   { name: "Dashboard", path: "/", icon: "ri-dashboard-line" },
-  { name: "My Data", path: "/mydata", icon: "ri-database-2-line" },
-  { name: "Ask Data", path: "/askdata", icon: "ri-chat-3-line" },
+  { name: "Meus Dados", path: "/mydata", icon: "ri-database-2-line" },
+  { name: "Perguntar aos Dados", path: "/askdata", icon: "ri-chat-3-line" },
   { name: "Analytics", path: "/analytics", icon: "ri-line-chart-line" },
   { name: "Marketplace", path: "/marketplace", icon: "ri-store-2-line" },
-  { name: "Settings", path: "/settings", icon: "ri-settings-3-line" },
+  { name: "Configurações", path: "/settings", icon: "ri-settings-3-line" },
 ];
 
 export default function Sidebar() {

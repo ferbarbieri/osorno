@@ -111,7 +111,7 @@ export default function Settings() {
 
       {/* Main content */}
       <div className="flex flex-col w-0 flex-1 overflow-hidden">
-        <TopBar title="Settings" onToggleSidebar={toggleSidebar} />
+        <TopBar title="Configurações" onToggleSidebar={toggleSidebar} />
 
         <main className="flex-1 relative overflow-y-auto focus:outline-none">
           <div className="py-6">
