@@ -159,12 +159,13 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
     };
   };
 
-  const handleSendMessage = async () => {
-    if (!inputValue.trim()) return;
+  const handleSendMessage = async (messageText?: string) => {
+    const textToSend = messageText || inputValue;
+    if (!textToSend.trim()) return;
 
     const userMessage: Message = {
       id: Date.now().toString(),
-      content: inputValue,
+      content: textToSend,
       isUser: true,
       timestamp: new Date()
     };
@@ -175,7 +176,7 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
 
     // Simulate AI processing time
     setTimeout(() => {
-      const response = generateMockResponse(inputValue);
+      const response = generateMockResponse(textToSend);
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),
         content: response.content,
@@ -348,7 +349,7 @@ Assistente de Dados IA
                     key={idx}
                     variant="outline"
                     className="cursor-pointer hover:bg-primary hover:text-white transition-colors"
-                    onClick={() => setInputValue(question)}
+                    onClick={() => handleSendMessage(question)}
                   >
                     {question}
                   </Badge>
@@ -368,7 +369,7 @@ Assistente de Dados IA
                     variant="outline"
                     className="cursor-pointer hover:bg-primary hover:text-white transition-colors"
                     onClick={() => {
-                      setInputValue(question);
+                      handleSendMessage(question);
                       setShowSuggestions(false);
                     }}
                   >
