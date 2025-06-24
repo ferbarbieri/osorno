@@ -214,12 +214,12 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
       case 'bar':
         return (
           <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-            <ResponsiveContainer width="100%" height={250}>
+            <ResponsiveContainer width="100%" height={300}>
               <BarChart data={message.chartData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey={Object.keys(message.chartData[0])[0]} />
                 <YAxis />
-                <Tooltip formatter={(value) => typeof value === 'number' && value > 1000 ? `$${(value as number).toLocaleString()}` : value} />
+                <Tooltip formatter={(value) => typeof value === 'number' && value > 1000 ? `R$ ${(value as number).toLocaleString()}` : value} />
                 <Bar dataKey={Object.keys(message.chartData[0])[1]} fill="#FF7A00" />
               </BarChart>
             </ResponsiveContainer>
@@ -229,12 +229,12 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
       case 'line':
         return (
           <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-            <ResponsiveContainer width="100%" height={250}>
+            <ResponsiveContainer width="100%" height={300}>
               <LineChart data={message.chartData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey={Object.keys(message.chartData[0])[0]} />
                 <YAxis />
-                <Tooltip formatter={(value) => typeof value === 'number' && value > 1000 ? `$${(value as number).toLocaleString()}` : value} />
+                <Tooltip formatter={(value) => typeof value === 'number' && value > 1000 ? `R$ ${(value as number).toLocaleString()}` : value} />
                 <Line type="monotone" dataKey="revenue" stroke="#FF7A00" strokeWidth={2} />
                 <Line type="monotone" dataKey="predicted" stroke="#6B7280" strokeWidth={2} strokeDasharray="5 5" />
               </LineChart>
@@ -245,13 +245,13 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
       case 'pie':
         return (
           <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-            <ResponsiveContainer width="100%" height={250}>
+            <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
                   data={message.chartData}
                   cx="50%"
                   cy="50%"
-                  outerRadius={80}
+                  outerRadius={100}
                   dataKey="value"
                   label={({ name, value }) => `${name}: ${value}%`}
                 >
