@@ -20,7 +20,7 @@ export default function Sidebar() {
           <div className="flex items-center flex-shrink-0 px-4 mb-6">
             <div className="flex items-center">
               <img 
-                src="/attached_assets/osorno_1750788056049.png" 
+                src="/assets/osorno_logo.png" 
                 alt="Osorno Analytics" 
                 className="h-8 w-auto"
               />
