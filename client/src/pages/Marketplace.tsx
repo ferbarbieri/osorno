@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import Sidebar from "@/components/Sidebar";
 import TopBar from "@/components/TopBar";
@@ -194,11 +195,13 @@ function MarketplaceItem({ item }: { item: MarketplaceItem }) {
           </div>
         </div>
         <div className="mt-3 space-y-2">
-          <Button className="w-full">
-            View Details
-          </Button>
+          <Link href={`/dataset/${item.id}`} className="w-full block">
+            <Button className="w-full">
+              Ver Detalhes
+            </Button>
+          </Link>
           <Button variant="outline" className="w-full">
-            <i className="ri-shopping-cart-line mr-1"></i> Purchase
+            <i className="ri-shopping-cart-line mr-1"></i> Adicionar ao Carrinho
           </Button>
         </div>
       </CardContent>

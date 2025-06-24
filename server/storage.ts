@@ -116,33 +116,47 @@ export class MemStorage implements IStorage {
     const marketplaceItems = [
       {
         id: this.marketplaceItemId++,
-        title: 'Retail Consumer Behavior Dataset',
-        description: 'Comprehensive dataset with consumer behavior patterns across 50+ retail categories.',
-        price: '$349/month',
-        rating: 5,
-        datasetId: 1,
+        title: 'Dados de Comportamento do Consumidor no Varejo',
+        description: 'Dataset abrangente com padrões de comportamento do consumidor em mais de 50 categorias de varejo.',
+        category: 'Varejo & E-commerce',
+        price: 'R$ 2.500',
+        rating: 4.5,
         userId: demoUser.id,
-        createdAt: new Date()
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         id: this.marketplaceItemId++,
-        title: 'Global Supply Chain Metrics',
-        description: 'Real-time supply chain performance data covering 75 countries and 12 industries.',
-        price: '$499/month',
-        rating: 5,
-        datasetId: 1,
+        title: 'Tendências do Mercado Financeiro 2024',
+        description: 'Dados do mercado de ações, tendências de criptomoedas e indicadores econômicos.',
+        category: 'Finanças & Investimentos',
+        price: 'R$ 1.800',
+        rating: 4.2,
         userId: demoUser.id,
-        createdAt: new Date()
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         id: this.marketplaceItemId++,
-        title: 'Financial Market Trends',
-        description: 'Historical and predictive financial data covering major global markets and asset classes.',
-        price: '$699/month',
-        rating: 4,
-        datasetId: 2,
+        title: 'Dataset de Analytics de Saúde',
+        description: 'Dados anonimizados de pacientes, resultados de tratamentos e performance de instituições de saúde.',
+        category: 'Saúde & Medicina',
+        price: 'R$ 3.200',
+        rating: 4.8,
         userId: demoUser.id,
-        createdAt: new Date()
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: this.marketplaceItemId++,
+        title: 'Métricas de Engajamento em Redes Sociais',
+        description: 'Padrões de engajamento de usuários, performance de conteúdo e analytics de redes sociais.',
+        category: 'Marketing & Redes Sociais',
+        price: 'R$ 950',
+        rating: 4.0,
+        userId: demoUser.id,
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ];
     
