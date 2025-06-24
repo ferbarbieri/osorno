@@ -21,6 +21,8 @@ A prototype AI-powered data platform designed to validate the concept with poten
 - Updated all charts and UI components to match brand colors
 - Translated entire interface to Portuguese (Brazil)
 - Fixed AI chat interface to properly respond to Portuguese suggested questions
+- Created DatasetDetails page with comprehensive dataset information
+- Translated all marketplace datasets and interface elements to Portuguese
 
 ## Key Features
 1. **Simulated Data Upload**: Mock Excel file processing with realistic animations

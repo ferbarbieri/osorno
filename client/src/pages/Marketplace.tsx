@@ -182,7 +182,7 @@ function MarketplaceItem({ item }: { item: MarketplaceItem }) {
             {item.price}
           </div>
           <div className="flex items-center">
-            <span className="text-xs text-gray-500 mr-1">Rating:</span>
+            <span className="text-xs text-gray-500 mr-1">Avaliação:</span>
             <div className="flex">
               {Array(5).fill(0).map((_, idx) => (
                 <i 

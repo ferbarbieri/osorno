@@ -6,6 +6,7 @@ import MyData from "@/pages/MyData";
 import AskData from "@/pages/AskData";
 import Analytics from "@/pages/Analytics";
 import Marketplace from "@/pages/Marketplace";
+import DatasetDetails from "@/pages/DatasetDetails";
 import Settings from "@/pages/Settings";
 import NotFound from "@/pages/not-found";
 
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/askdata" component={AskData} />
       <Route path="/analytics" component={Analytics} />
       <Route path="/marketplace" component={Marketplace} />
+      <Route path="/dataset/:id" component={DatasetDetails} />
       <Route path="/settings" component={Settings} />
       <Route component={NotFound} />
     </Switch>
