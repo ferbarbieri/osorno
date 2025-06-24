@@ -43,6 +43,7 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
   ]);
   const [inputValue, setInputValue] = useState("");
   const [isTyping, setIsTyping] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -337,7 +338,7 @@ Assistente de Dados IA
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Suggested Questions */}
+          {/* Suggested Questions - Initial Display */}
           {messages.length === 1 && (
             <div className="border-t p-4">
               <p className="text-sm text-gray-600 mb-3">Experimente perguntar:</p>
@@ -356,20 +357,60 @@ Assistente de Dados IA
             </div>
           )}
 
-          {/* Input Area */}
-          <div className="border-t p-4">
-            <div className="flex space-x-2">
-              <Input
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyPress={handleKeyPress}
-                placeholder="Faça uma pergunta sobre seus dados..."
-                className="flex-1"
-                disabled={isTyping}
-              />
-              <Button onClick={handleSendMessage} disabled={!inputValue.trim() || isTyping}>
-                <i className="ri-send-plane-line"></i>
-              </Button>
+          {/* Collapsible Suggestions - After first interaction */}
+          {messages.length > 1 && showSuggestions && (
+            <div className="border-t p-4 bg-gray-50">
+              <p className="text-sm text-gray-600 mb-3">Experimente perguntar:</p>
+              <div className="flex flex-wrap gap-2">
+                {suggestedQuestions.map((question, idx) => (
+                  <Badge
+                    key={idx}
+                    variant="outline"
+                    className="cursor-pointer hover:bg-primary hover:text-white transition-colors"
+                    onClick={() => {
+                      setInputValue(question);
+                      setShowSuggestions(false);
+                    }}
+                  >
+                    {question}
+                  </Badge>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Suggestions Toggle & Input Area */}
+          <div className="border-t">
+            {/* Suggestions Toggle */}
+            {messages.length > 1 && (
+              <div className="px-4 pt-2">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowSuggestions(!showSuggestions)}
+                  className="text-xs text-gray-500 hover:text-gray-700"
+                >
+                  <span className="mr-1">Sugestões</span>
+                  <i className={`ri-arrow-${showSuggestions ? 'down' : 'up'}-s-line text-sm`}></i>
+                </Button>
+              </div>
+            )}
+            
+            {/* Input Area */}
+            <div className="p-4">
+              <div className="flex space-x-2">
+                <Input
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="Faça uma pergunta sobre seus dados..."
+                  className="flex-1"
+                  disabled={isTyping}
+                />
+                <Button onClick={handleSendMessage} disabled={!inputValue.trim() || isTyping}>
+                  <i className="ri-send-plane-line"></i>
+                </Button>
+              </div>
             </div>
           </div>
         </CardContent>
