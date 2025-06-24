@@ -19,12 +19,11 @@ export default function Sidebar() {
         <div className="flex flex-col flex-grow pt-5 pb-4 overflow-y-auto">
           <div className="flex items-center flex-shrink-0 px-4 mb-6">
             <div className="flex items-center">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white text-2xl font-bold">
-                O
-              </div>
-              <span className="ml-2 text-xl font-bold text-gray-900 font-heading">
-                Osorno
-              </span>
+              <img 
+                src="/attached_assets/osorno_1750788056049.png" 
+                alt="Osorno Analytics" 
+                className="h-8 w-auto"
+              />
             </div>
           </div>
           <nav className="mt-2 flex-1 px-2 space-y-1">

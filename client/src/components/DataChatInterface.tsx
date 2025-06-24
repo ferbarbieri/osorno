@@ -196,7 +196,7 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
   const renderChart = (message: Message) => {
     if (!message.chartData || !message.chartType) return null;
 
-    const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
+    const COLORS = ['#FF7A00', '#6B7280', '#F59E0B', '#EF4444', '#8B5CF6'];
 
     switch (message.chartType) {
       case 'bar':
@@ -208,7 +208,7 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
                 <XAxis dataKey={Object.keys(message.chartData[0])[0]} />
                 <YAxis />
                 <Tooltip formatter={(value) => typeof value === 'number' && value > 1000 ? `$${(value as number).toLocaleString()}` : value} />
-                <Bar dataKey={Object.keys(message.chartData[0])[1]} fill="#3B82F6" />
+                <Bar dataKey={Object.keys(message.chartData[0])[1]} fill="#FF7A00" />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -223,8 +223,8 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
                 <XAxis dataKey={Object.keys(message.chartData[0])[0]} />
                 <YAxis />
                 <Tooltip formatter={(value) => typeof value === 'number' && value > 1000 ? `$${(value as number).toLocaleString()}` : value} />
-                <Line type="monotone" dataKey="revenue" stroke="#3B82F6" strokeWidth={2} />
-                <Line type="monotone" dataKey="predicted" stroke="#10B981" strokeWidth={2} strokeDasharray="5 5" />
+                <Line type="monotone" dataKey="revenue" stroke="#FF7A00" strokeWidth={2} />
+                <Line type="monotone" dataKey="predicted" stroke="#6B7280" strokeWidth={2} strokeDasharray="5 5" />
               </LineChart>
             </ResponsiveContainer>
           </div>

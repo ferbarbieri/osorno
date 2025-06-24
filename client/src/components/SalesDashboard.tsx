@@ -74,7 +74,7 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
     { stage: 'Closed Won', count: 249, percentage: 50 }
   ];
 
-  const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6'];
+  const COLORS = ['#FF7A00', '#6B7280', '#F59E0B', '#EF4444', '#8B5CF6'];
 
   return (
     <div className="space-y-6">
@@ -204,8 +204,8 @@ export default function SalesDashboard({ onStartChat }: SalesDashboardProps) {
                   <XAxis dataKey="month" />
                   <YAxis />
                   <Tooltip formatter={(value) => [`$${(value as number).toLocaleString()}`, '']} />
-                  <Bar dataKey="revenue" fill="#3B82F6" name="Actual Revenue" />
-                  <Bar dataKey="target" fill="#10B981" name="Target" />
+                  <Bar dataKey="revenue" fill="#FF7A00" name="Actual Revenue" />
+                  <Bar dataKey="target" fill="#6B7280" name="Target" />
                 </BarChart>
               </ResponsiveContainer>
             </CardContent>

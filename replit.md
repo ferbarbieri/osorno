@@ -17,6 +17,8 @@ A prototype AI-powered data platform designed to validate the concept with poten
 - Created data connection simulation workflow
 - Fixed sidebar navigation warning by replacing nested anchor tags
 - Updated Dashboard to showcase prototype capabilities clearly
+- Applied Osorno branding with logo and orange color scheme (#FF7A00)
+- Updated all charts and UI components to match brand colors
 
 ## Key Features
 1. **Simulated Data Upload**: Mock Excel file processing with realistic animations
