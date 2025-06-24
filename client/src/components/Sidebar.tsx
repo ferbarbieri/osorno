@@ -22,7 +22,7 @@ export default function Sidebar() {
               <img 
                 src="/osorno-logo.png" 
                 alt="Osorno Analytics" 
-                className="h-8 w-auto"
+                className="h-12 w-auto"
               />
             </div>
           </div>
