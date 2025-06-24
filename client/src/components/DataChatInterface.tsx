@@ -213,8 +213,8 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
     switch (message.chartType) {
       case 'bar':
         return (
-          <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-            <ResponsiveContainer width="100%" height={300}>
+          <div className="mt-4 p-4 bg-gray-50 rounded-lg overflow-hidden">
+            <ResponsiveContainer width="100%" height={280}>
               <BarChart data={message.chartData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey={Object.keys(message.chartData[0])[0]} />
@@ -228,8 +228,8 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
 
       case 'line':
         return (
-          <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-            <ResponsiveContainer width="100%" height={300}>
+          <div className="mt-4 p-4 bg-gray-50 rounded-lg overflow-hidden">
+            <ResponsiveContainer width="100%" height={280}>
               <LineChart data={message.chartData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey={Object.keys(message.chartData[0])[0]} />
@@ -244,14 +244,14 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
 
       case 'pie':
         return (
-          <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-            <ResponsiveContainer width="100%" height={300}>
+          <div className="mt-4 p-4 bg-gray-50 rounded-lg overflow-hidden">
+            <ResponsiveContainer width="100%" height={280}>
               <PieChart>
                 <Pie
                   data={message.chartData}
                   cx="50%"
                   cy="50%"
-                  outerRadius={100}
+                  outerRadius={90}
                   dataKey="value"
                   label={({ name, value }) => `${name}: ${value}%`}
                 >
@@ -271,8 +271,8 @@ export default function DataChatInterface({ onClose }: DataChatInterfaceProps) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <Card className="w-full max-w-4xl h-[600px] flex flex-col">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+      <Card className="w-full max-w-4xl max-h-[90vh] flex flex-col">
         <CardHeader className="border-b">
           <div className="flex justify-between items-center">
             <CardTitle className="flex items-center">
